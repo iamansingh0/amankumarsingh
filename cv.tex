@@ -18,87 +18,35 @@
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
 %	
-%
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
 \usepackage{url}
 \usepackage{parskip} 	
-
-%other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[scale=0.9]{geometry}
-
-%tabularx environment
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
 \usepackage{supertabular}
 \usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
-
-%for social icons
 \usepackage{fontawesome5}
 
-%debug page outer frames
-%\usepackage{showframe}
-
-
-% job listing environments
+% Job listing environments
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
@@ -121,94 +69,88 @@
     \end{minipage}    
     }
 
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
 
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
 \pagestyle{empty} 
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Aman Kumar Singh} \\[7.5pt]
+\href{https://github.com/iamansingh0}{\raisebox{-0.05\height}\faGithub\ github.com/iamansingh0} \ $|$ \ 
+\href{https://www.linkedin.com/in/aman-kumar-singh-08b2b220b/}{\raisebox{-0.05\height}\faLinkedin\ linkedin.com/in/AmanKumar} \ $|$ \ 
+\href{mailto:amanks2205@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ amanks2205@gmail.com} \ $|$ \ 
+\href{tel:+91-7355197337}{\raisebox{-0.05\height}\faMobile \ 7355197337} \\
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Vellore Institute of Technology} & Chennai, Tamil Nadu \\
+B.Tech, Computer Science Engineering & 2020 -- 2024 \\
+CGPA: 9.1 & \\
+\end{tabularx}
 
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
-
-%Experience
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
-
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+\begin{joblong}{Software Developer - TVS Credit Services}{July 2024 - Present}
+\item Led development of responsive and reusable UI components using React.js and Salesforce LWC, improving frontend development efficiency by 20\% and reducing redundant code.  
+\item Developed a knowledge base for call center executives, cutting average query handling time from 10 minutes to 1 minute and reducing TAT by 35\%, while lowering call drop rates by 25\%.  
+\item Conducted code reviews on 40+ Apex classes each sprint, ensuring high-quality standards and reducing production bugs.   
+\item Collaborated with cross-functional teams, improving feature delivery efficiency by 20\% while meeting deadlines.  
+\item Managed CI/CD pipelines using GitLab, implementing SonarQube and Checkmarx for code quality and security checks, reducing deployment failures by 35\%.  
 \end{joblong}
-  
-%Projects
-\section{Projects}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+\begin{joblong}{Graduate Engineer Trainee - TVS Credit Services}{Feb 2024 - May 2024} 
+\item Authored technical documentation and shared best practices with the team, improving onboarding efficiency for new developers by 30\%.  
+\item Automated business processes using Apex, reducing manual effort by 40\%.  
+\item Integrated third-party applications using REST APIs, streamlining workflows and reducing data entry errors by 25\%.  
+\item Configured Salesforce flows, approval processes, and validation rules as an admin, enhancing automation and reducing manual interventions by 35\%.  
+\end{joblong}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\begin{joblong}{Founding Engineer Intern - Codemate.AI}{Aug 2023 - Sep 2023}
+\item Coordinated end-user development using TypeScript, VS Code extensions, and vector-embedded databases with Firebase, reducing feature implementation time by 30\%.  
+\item Expanded a codebase and chat history management system integrated with ChatGPT, improving developer productivity by 40\%.  
+\item Implemented website authentication and user management using Firebase, ensuring secure access for over 1000 users.   
+\end{joblong}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
-
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+\textbf{Languages:} &  \normalsize{C/C++, Apex, Java, JavaScript} \\
+\textbf{Primary:}  &  \normalsize{Salesforce, SQL, SOQL, SOSL, JavaScript, React.js, HTML/CSS, OOP, System Design} \\  
+\textbf{Secondary:}  &  \normalsize{Node.js, Express.js, MongoDB, Git} \\
+\end{tabularx}
+
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+\textbf{AscendAI – AI Career Coach} & \hfill \href{https://ascend-ai-rho.vercel.app/}{Link} \\
+\multicolumn{2}{@{}X@{}}{\small\textit{Tech Stack: React.js, TypeScript, Node.js, PostgreSQL, Gemini AI API, Shadcn UI}} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\vspace{-6pt} 
+\begin{itemize}[leftmargin=2em, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item Engineered a full-stack AI-driven application with a responsive React.js frontend and reusable components, reducing development time by 25\%.  
+    \item Integrated Gemini AI APIs to deliver personalized career recommendations, increasing engagement.  
+    \item Devised an adaptive quiz system with real-time rendering and scoring, improving user assessment accuracy by 40\%.  
+\end{itemize}
+\end{minipage}
+} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+\textbf{Knowledge Base} \\[-2pt]
+\multicolumn{2}{@{}X@{}}{\small\textit{Tech Stack: Salesforce Admin, LWC, Apex, JavaScript}} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\vspace{-6pt}
+\begin{itemize}[leftmargin=2em, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item Built a centralized Knowledge Base for call center executives.
+    \item Reduced call center TAT by 30\% through faster agent query resolution.
+    \item Trained 50+ call center agents on the Knowledge Base, improving first-contact resolution rate by 20\%.
+\end{itemize}
+\end{minipage}
+} \\
 \end{tabularx}
 
 \vfill
