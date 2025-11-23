@@ -1,45 +1,20 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-
-\documentclass[a4paper,9pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}     
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.95]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 \usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-\usepackage{titlesec}				
+\usepackage{titlesec}                
 \usepackage{multicol}
 \usepackage{multirow}
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-\usepackage[unicode, draft=false]{hyperref}
+\usepackage[style=authoryear,sorting=ynt,maxbibnames=2]{biblatex}
+\usepackage[unicode,draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
@@ -48,114 +23,129 @@
 
 % Job listing environments
 \newenvironment{jobshort}[2]
-    {
+{
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
     \textbf{#1} & \hfill &  #2 \\[3.75pt]
     \end{tabularx}
-    }
-    {
-    }
+}
+{
+}
 
 \newenvironment{joblong}[2]
-    {
+{
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill & #2 \\[3.75pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
+    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt,label=--]
+}
+{
     \end{itemize}
     \end{minipage}    
-    }
+}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
 \begin{document}
 
-\pagestyle{empty} 
+\pagestyle{empty}
 
+% ---------- HEADER ----------
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Aman Kumar Singh} \\[7.5pt]
 \href{https://github.com/iamansingh0}{\raisebox{-0.05\height}\faGithub\ github.com/iamansingh0} \ $|$ \ 
 \href{https://www.linkedin.com/in/aman-kumar-singh-08b2b220b/}{\raisebox{-0.05\height}\faLinkedin\ linkedin.com/in/AmanKumar} \ $|$ \ 
-\href{mailto:amanks2205@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ amanks2205@gmail.com} \ $|$ \ 
-\href{tel:+91-7355197337}{\raisebox{-0.05\height}\faMobile \ 7355197337} \\
+\href{mailto:amanks2205@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ amanks2205@gmail.com} \ $|$ \ 
+\href{tel:+91-7355197337}{\raisebox{-0.05\height}\faMobile\ 7355197337} \\
 \end{tabularx}
 
-\section{Education}
+% ---------- SUMMARY ----------
+\section*{Summary}
+PD1-certified Salesforce Developer with hands-on experience in LWC, Apex, REST APIs, and large-data processing. Skilled in optimizing governor limits, building modular component architectures, and strengthening CI/CD pipelines. Focused on secure integrations, scalable designs, and measurable performance improvements across applications.
+
+% ---------- EDUCATION ----------
+\section*{Education}
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{Vellore Institute of Technology, Chennai} & 2020 -- 2024 \\
-B.Tech, Computer Science Engineering & CGPA: 9.1 \\
+\textbf{Vellore Institute of Technology, Chennai} & Sep 2020 -- Aug 2024 \\
+B.Tech in Computer Science Engineering & CGPA: 9.1 \\
 \end{tabularx}
 
-\section{Work Experience}
-
-\begin{joblong}{Software Developer - TVS Credit Services}{July 2024 - Present}
-\item Led development of responsive and reusable UI components using React.js and Salesforce LWC, improving frontend development efficiency by 20\% and reducing redundant code.  
-\item Developed a knowledge base for call center executives, cutting average query handling time from 10 minutes to 1 minute and reducing TAT by 35\%, while lowering call drop rates by 25\%.  
-\item Conducted code reviews on 40+ Apex classes each sprint, ensuring high-quality standards and reducing production bugs.   
-\item Collaborated with cross-functional teams, improving feature delivery efficiency by 20\% while meeting deadlines.  
-\item Managed CI/CD pipelines using GitLab, implementing SonarQube and Checkmarx for code quality and security checks, reducing deployment failures by 35\%.  
-\end{joblong}
-
-\begin{joblong}{Graduate Engineer Trainee - TVS Credit Services}{Feb 2024 - May 2024} 
-\item Automated business processes using Apex, reducing manual effort by 40\%.  
-\item Integrated third-party applications using REST APIs, streamlining workflows and reducing data entry errors by 25\%.  
-\item Configured Salesforce flows, approval processes, and validation rules as an admin, enhancing automation and reducing manual interventions by 35\%.  
-\end{joblong}
-
-\begin{joblong}{Founding Engineer Intern - Codemate.AI}{Aug 2023 - Sep 2023}
-\item Coordinated end-user development using TypeScript, VS Code extensions, and vector-embedded databases with Firebase, reducing feature implementation time by 30\%.  
-\item Expanded a codebase and chat history integrated with AI, improving developer productivity by 40\%.  
-\item Implemented website authentication and user management using Firebase, ensuring secure access for over 1000 users.   
-\end{joblong}
-
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages:} &  \normalsize{C/C++, Apex, Java, JavaScript} \\
-\textbf{Primary:}  &  \normalsize{Salesforce, SQL, SOQL, SOSL, JavaScript, React.js, HTML/CSS, OOP, System Design, Spring Boot} \\  
-\textbf{Secondary:}  &  \normalsize{Node.js, Express.js, MongoDB, Git} \\
-\end{tabularx}
-
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{@{}l r@{}}
-\textbf{AscendAI – AI Career Coach} & \hfill \href{https://ascend-ai-rho.vercel.app/}{Link} \\
-\multicolumn{2}{@{}X@{}}{\small\textit{Tech Stack: React.js, TypeScript, Node.js, PostgreSQL, Gemini AI API, Shadcn UI}} \\
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-\vspace{-6pt} 
-\begin{itemize}[leftmargin=2em, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
-    \item Engineered a full-stack AI-driven application with a responsive React.js frontend and reusable components, reducing development time by 25\%.  
-    \item Integrated Gemini AI APIs to deliver personalized career recommendations, increasing engagement.  
-    \item Devised an adaptive quiz system with real-time rendering and scoring, improving user assessment accuracy by 40\%.  
+% ---------- CERTIFICATIONS ----------
+\section*{Certifications}
+\begin{itemize}[leftmargin=1em, itemsep=3pt]
+    \item Salesforce Certified Platform Developer I (PD1), 2025 \hfill \href{https://www.salesforce.com/trailblazer/iamansingh0}{\small View}
 \end{itemize}
-\end{minipage}
-} \\
+
+% ---------- EXPERIENCE ----------
+\section*{Work Experience}
+
+\begin{joblong}{Software Developer — TVS Credit Services, Chennai}{Jul 2024 -- Present}
+\item Built a reusable LWC component library using @wire + LDS, reducing code duplication and cutting rework time by 20\%.
+\item Spearheaded a scalable Knowledge Base in LWC using indexed SOQL and caching, reducing customer query resolution time by 80\%.
+\item Engineered robust Batch Apex processes for LDV operations, decreasing nightly processing errors by 40\% and improving data synchronization accuracy across Salesforce by 25\%.
+\item Implemented secure REST integrations with SAP/Mule, lowering sync failures by 30\%.
+\item Enhanced GitLab CI/CD with Checkmarx and SonarQube checks, reducing deployment issues by 35\%.
+\end{joblong}
+
+\begin{joblong}{Graduate Engineer Trainee — TVS Credit Services, Chennai}{Feb 2024 -- May 2024}
+\item Automated processes using Apex and Flows, reducing manual effort by 40\%.
+\item Designed REST integrations with dedupe logic and structured error handling, cutting data inconsistencies by 25\%.
+\item Optimized Apex and LWC implementations for governor limit compliance, reducing CPU time by 30\%.
+\end{joblong}
+
+% ---------- SKILLS ----------
+\section*{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Salesforce Development:} & Apex (Batch, Queueable), LWC, Triggers, SOQL/SOSL, Flows, Platform Events, Integration Patterns, LDV Handling, Security (CRUD/FLS). \\
+\textbf{Integrations:} & REST APIs, SAP/Mule callouts, OAuth2, Error handling. \\
+\textbf{DevOps \& Tools:} & SFDX CLI, GitLab CI/CD, Git, Checkmarx, SonarQube, VS Code, Postman. \\
+\textbf{Web \& Backend:} & JavaScript (ES6+), TypeScript, React, Node.js, MongoDB, SQL. \\
 \end{tabularx}
 
+% ---------- PROJECTS ----------
+\section*{Projects}
+
+% ----- Knowledge Base -----
 \begin{tabularx}{\linewidth}{@{}l r@{}}
-\textbf{Knowledge Base} \\[-2pt]
-\multicolumn{2}{@{}X@{}}{\small\textit{Tech Stack: Salesforce Admin, LWC, Apex, JavaScript}} \\
-\multicolumn{2}{@{}X@{}}{
+\textbf{Knowledge Base} \\
+\multicolumn{2}{@{}X@{}}{\small\textit{Salesforce Admin, LWC, Apex, JavaScript}} \\
+\multicolumn{2}{@{}X@{}}
+{
 \begin{minipage}[t]{\linewidth}
 \vspace{-6pt}
-\begin{itemize}[leftmargin=2em, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
-    \item Built a centralized Knowledge Base for call center executives.
-    \item Reduced call center TAT by 30\% through faster agent query resolution.
-    \item Trained 50+ call center agents on the Knowledge Base, improving first-contact resolution rate by 20\%.
+\begin{itemize}[leftmargin=1.3em, itemsep=3pt]
+    \item Deployed a unified Knowledge Base in Salesforce LWC for call center executives, streamlining access to loan product related articles.  
+\item Reduced average call center TAT by 25\% resulting in lower call drop rates.  
+\item Trained over 50 support agents on the new Knowledge Base workflows and LWC interface, improving overall team efficiency.  
+
 \end{itemize}
 \end{minipage}
-} \\
+}
+\end{tabularx}
+
+% ----- AscendAI -----
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+\textbf{AscendAI — AI Career Coach} & \href{https://ascend-ai-rho.vercel.app/}{Link} \\
+\multicolumn{2}{@{}X@{}}{\small\textit{React, TypeScript, Node.js, PostgreSQL, Gemini API, Shadcn UI}} \\
+\multicolumn{2}{@{}X@{}}
+{
+\begin{minipage}[t]{\linewidth}
+\vspace{-6pt}
+\begin{itemize}[leftmargin=1.3em, itemsep=3pt]
+    \item Orchestrated a full-stack AI career assistant with modular React architecture, reducing development complexity.
+    \item Integrated Gemini AI for personalized guidance, increasing user engagement.
+    \item Developed a quiz engine with real-time scoring, improving assessment accuracy by 40\%.
+\end{itemize}
+\end{minipage}
+}
 \end{tabularx}
 
 \section{Publications}
+\begin{itemize}[leftmargin=1em, itemsep=3pt]
+    \textbf{U-Net Inspired Deep Neural Network-Based Smoke Plume Detection in Satellite Images}  \\ Published in \textit{Computers, Materials \& Continua (CMC)}, SCIE Indexed, Impact Factor: 3.1, 2024  
+    \hfill \href{https://www.techscience.com/cmc/v79n1/56308}{\small View}
+\end{itemize}
 
-\begin{tabularx}{\linewidth}{@{}X@{}}
-\textbf{U-Net Inspired Deep Neural Network-Based Smoke Plume Detection in Satellite Images} \\
-\textit{Computers, Materials and Continua (CMC)} — SCIE, Impact Factor: 3.1, 2024 \\
-\end{tabularx}
 
 \end{document}
